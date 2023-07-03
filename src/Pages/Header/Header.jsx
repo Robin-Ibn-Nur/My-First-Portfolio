@@ -185,9 +185,6 @@ const Header = () => {
                 </div>
                 <Collapse open={openNav}>
                     {navList}
-                    <Button variant="gradient" size="sm" fullWidth className="mb-2">
-                        <span>Contact Me</span>
-                    </Button>
                 </Collapse>
             </Navbar>
         </>
