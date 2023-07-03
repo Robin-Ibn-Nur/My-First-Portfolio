@@ -1,7 +1,7 @@
 import TimeCounter from "../Time/TimeCounter";
 import './Banner.css'
-import resume from '../../../../public/Md_Robin.pdf'
-
+import resume from '/Md_Robin.pdf'
+import { AiOutlineDownload } from "react-icons/ai";
 const Banner = () => {
     const restartAnimation = () => {
         const textAnimation = document.querySelector(".text-stroke");
@@ -27,10 +27,10 @@ const Banner = () => {
                         </text>
                     </svg>
                 </main>
-                {/* <a className="reset" download={"https://drive.google.com/drive/u/0/my-drive"}>
-                    <button className="" onClick={restartAnimation}>DOWNLOAD RESUME</button>
-                </a> */}
-                <a className="reset" onClick={restartAnimation} href={resume} download>DOWNLOAD RESUME</a>
+                <a className="reset flex items-center gap-2" onClick={restartAnimation} href={resume} download>
+                    <span>DOWNLOAD RESUME</span>
+                    <AiOutlineDownload />
+                </a>
 
             </div>
         </div>

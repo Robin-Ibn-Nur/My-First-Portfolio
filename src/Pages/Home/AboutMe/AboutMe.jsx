@@ -30,7 +30,7 @@ const AboutMe = () => {
                         and working collaboratively in a team environment. With my skills and experience, I strive to deliver high-quality code and
                         exceptional user experiences. I am continuously learning and exploring
                         new technologies to stay up-to-date with the latest industry trends. Let's collaborate and bring your ideas to life! Feel free to reach out to
-                        me for any web development projects or opportunities." delay={5}></Typewriter>
+                        me for any web development projects or opportunities." delay={50}></Typewriter>
                     </p>
                 </animated.div>
             </animated.div>
