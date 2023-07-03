@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import "tailwindcss/tailwind.css";
 import {
     Navbar,
@@ -11,7 +11,6 @@ import {
 
 } from "@material-tailwind/react";
 import { DrawerForm } from '../../Component/Drawer/DrawerForm';
-// import Typewriter from '../../Component/TypeWriter/Typewriter';
 
 import Logo from '../../Component/Logo/Logo';
 import r from '/R.png'
@@ -19,7 +18,6 @@ import { animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
 
 const Header = () => {
-
     const [openNav, setOpenNav] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
