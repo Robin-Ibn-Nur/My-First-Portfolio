@@ -86,7 +86,7 @@ const Projects = () => {
             clientCode: "https://github.com/saifsammy/BackPacker--client-side",
             serverCode: "https://github.com/saifsammy/BackPacker-server-side"
         },
-        
+
         {
             projectName: "Crazy Programmer",
             img: img7,
@@ -117,7 +117,12 @@ const Projects = () => {
         },
     ]
 
-
+    const pagination = {
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+    };
 
     return (
         <div id='myPortfolio' className='h-auto'>
@@ -131,9 +136,7 @@ const Projects = () => {
                             delay: 10000,
                             disableOnInteraction: false,
                         }}
-                        pagination={{
-                            clickable: true,
-                        }}
+                        pagination={pagination}
                         navigation={true}
                         modules={[Autoplay, Pagination, Navigation]}
                         className="mySwiper"
