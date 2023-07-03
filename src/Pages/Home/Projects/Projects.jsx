@@ -128,7 +128,7 @@ const Projects = () => {
                                     </a>
                                     <a className='w-full' href={pro?.clientCode} target="_blank" rel="noopener noreferrer">
                                         <Button size='lg' color="white">
-                                            Cline
+                                            Client
                                         </Button>
                                     </a>
                                     <a className='w-full' href={pro?.serverCode} target="_blank" rel="noopener noreferrer">
