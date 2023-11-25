@@ -19,8 +19,8 @@ import { animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
 const Header = () => {
     const [openNav, setOpenNav] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
-
+    // const [isScrolled, setIsScrolled] = useState(false);
+    // const [prevScrollY, setPrevScrollY] = useState(0);
 
     useEffect(() => {
         window.addEventListener(
@@ -31,21 +31,27 @@ const Header = () => {
 
 
     // scroll function
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 0) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const currentScrollY = window.scrollY;
 
-        window.addEventListener('scroll', handleScroll);
+    //         if (currentScrollY > prevScrollY && currentScrollY > 50) {
+    //             // Scrolling down and scrolled more than 50 pixels
+    //             setIsScrolled(true);
+    //         } else {
+    //             // Scrolling up or at the top
+    //             setIsScrolled(false);
+    //         }
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    //         setPrevScrollY(currentScrollY);
+    //     };
+
+    //     window.addEventListener('scroll', handleScroll);
+
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, [prevScrollY]);
 
     useEffect(() => {
         scrollSpy.update();
@@ -69,7 +75,7 @@ const Header = () => {
                 className="p-1 font-normal cursor-pointer"
             >
                 <a
-                    className={`${isScrolled ? "flex items-center font-bold text-white transition-colors hover:text-blue-500 focus:text-blue-500" : "flex items-center font-bold transition-colors hover:text-blue-500 focus:text-blue-500"}`}
+                    className="flex items-center font-bold transition-colors hover:text-blue-500 focus:text-blue-500 text-white"
                     onClick={() => scrollToSection("home")}
                 >
                     <Logo text="Home"></Logo>
@@ -81,7 +87,7 @@ const Header = () => {
                 color="blue-gray"
                 className="p-1 font-normal cursor-pointer"
             >
-                <a className={`${isScrolled ? "flex items-center font-bold text-white transition-colors hover:text-blue-500 focus:text-blue-500" : "flex items-center font-bold transition-colors hover:text-blue-500 focus:text-blue-500"}`}
+                <a className="flex items-center font-bold transition-colors hover:text-blue-500 focus:text-blue-500 text-white"
                     onClick={() => scrollToSection("aboutMe")}
                 >
                     <Logo text="About Me"></Logo>
@@ -93,7 +99,7 @@ const Header = () => {
                 color="blue-gray"
                 className="p-1 font-normal cursor-pointer"
             >
-                <a className={`${isScrolled ? "flex items-center font-bold text-white transition-colors hover:text-blue-500 focus:text-blue-500" : "flex items-center font-bold transition-colors hover:text-blue-500 focus:text-blue-500"}`}
+                <a className="flex items-center font-bold transition-colors hover:text-blue-500 focus:text-blue-500 text-white"
                     onClick={() => scrollToSection("skills")}
                 >
                     <Logo text="Skills"></Logo>
@@ -105,7 +111,7 @@ const Header = () => {
                 color="blue-gray"
                 className="p-1 font-normal cursor-pointer"
             >
-                <a className={`${isScrolled ? "flex items-center font-bold text-white transition-colors hover:text-blue-500 focus:text-blue-500" : "flex items-center font-bold transition-colors hover:text-blue-500 focus:text-blue-500"}`}
+                <a className="flex items-center font-bold transition-colors hover:text-blue-500 focus:text-blue-500 text-white"
                     onClick={() => scrollToSection("myPortfolio")}
                 >
                     <Logo text="My Portfolio"></Logo>
@@ -117,7 +123,7 @@ const Header = () => {
                 color="blue-gray"
                 className="p-1 font-normal cursor-pointer"
             >
-                <a className={`${isScrolled ? "flex items-center font-bold text-white transition-colors hover:text-blue-500 focus:text-blue-500" : "flex items-center font-bold transition-colors hover:text-blue-500 focus:text-blue-500"}`}
+                <a className="flex items-center font-bold transition-colors hover:text-blue-500 focus:text-blue-500 text-white"
                     onClick={() => scrollToSection("contactMe")}
                 >
                     <Logo text="Contact Me"></Logo>
@@ -127,21 +133,21 @@ const Header = () => {
     );
 
     return (
-        <>
-            <Navbar className={`${isScrolled ? "sticky top-0 z-10 transition duration-600 backdrop-blur-sm bg-white/30 border-none" : ""} font-bold h-max max-w-full rounded-none py-2 px-4 lg:px-10 lg:py-6 transition duration-600`}>
+        <div className="sticky top-0 z-10  flex justify-between ">
+            <Navbar className=" backdrop-blur-sm bg-white/10 border-none font-bold max-w-full rounded-none">
                 <div className="flex items-center justify-between">
 
                     <Typography
                         as="a"
                         href="#"
-                        className={`mr-4 cursor-pointer py-1.5 font-bold text-xl ${isScrolled ? 'text-white' : 'text-black'}`}
+                        className="mr-4 cursor-pointer font-bold text-xl text-white"
                     >
-                        <Avatar src={r} alt="avatar" size="lg" />
+                        <Avatar src={r} alt="avatar" />
                     </Typography>
 
                     <div className="flex items-center gap-4">
                         <div className="mr-4 hidden lg:block">{navList}</div>
-                        <DrawerForm></DrawerForm>
+                        {/* <DrawerForm></DrawerForm> */}
                         <IconButton
                             variant="text"
                             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -185,7 +191,7 @@ const Header = () => {
                     {navList}
                 </Collapse>
             </Navbar>
-        </>
+        </div>
     );
 };
 
