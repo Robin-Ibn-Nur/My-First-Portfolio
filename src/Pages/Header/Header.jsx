@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import "tailwindcss/tailwind.css";
 import {
     Navbar,
@@ -10,7 +10,6 @@ import {
     Avatar,
 
 } from "@material-tailwind/react";
-import { DrawerForm } from '../../Component/Drawer/DrawerForm';
 
 import Logo from '../../Component/Logo/Logo';
 import r from '/R.png'
@@ -19,8 +18,6 @@ import { animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
 const Header = () => {
     const [openNav, setOpenNav] = useState(false);
-    // const [isScrolled, setIsScrolled] = useState(false);
-    // const [prevScrollY, setPrevScrollY] = useState(0);
 
     useEffect(() => {
         window.addEventListener(
@@ -29,29 +26,6 @@ const Header = () => {
         );
     }, []);
 
-
-    // scroll function
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         const currentScrollY = window.scrollY;
-
-    //         if (currentScrollY > prevScrollY && currentScrollY > 50) {
-    //             // Scrolling down and scrolled more than 50 pixels
-    //             setIsScrolled(true);
-    //         } else {
-    //             // Scrolling up or at the top
-    //             setIsScrolled(false);
-    //         }
-
-    //         setPrevScrollY(currentScrollY);
-    //     };
-
-    //     window.addEventListener('scroll', handleScroll);
-
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    // }, [prevScrollY]);
 
     useEffect(() => {
         scrollSpy.update();
@@ -67,7 +41,7 @@ const Header = () => {
 
     // menu Items
     const navList = (
-        <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+        <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
             <Typography
                 as="li"
                 variant="small"
@@ -147,7 +121,7 @@ const Header = () => {
 
                     <div className="flex items-center gap-4">
                         <div className="mr-4 hidden lg:block">{navList}</div>
-                        {/* <DrawerForm></DrawerForm> */}
+
                         <IconButton
                             variant="text"
                             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
