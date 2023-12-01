@@ -10,7 +10,7 @@ const Projects = () => {
 
         <div id='myPortfolio'>
             <Title text="My Projects" />
-            <div className="container my-10 mx-auto grid gap-5 sm:grid-cols-1 lg:grid-cols-2">
+            <div className="container my-10 mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project, i) => (
                     <ProjectCard project={project} key={i} />
                 ))}

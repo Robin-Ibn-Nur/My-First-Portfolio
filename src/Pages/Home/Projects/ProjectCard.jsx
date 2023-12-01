@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
     } = project;
 
     // Limit description to 20 words
-    // const truncatedDescription = description.split(' ').slice(0, 20).join(' ');
+    const truncatedDescription = description.split(' ').slice(0, 15).join(' ');
 
     return (
         <Card
@@ -30,7 +30,7 @@ const ProjectCard = ({ project }) => {
             <CardHeader
                 floated={false}
                 shadow={false}
-                className="m-0  h-[20rem] relative p-5"
+                className="m-0 relative p-2"
 
             >
                 <img src={img} alt={projectName} className="object-cover w-full h-full" />
@@ -41,8 +41,8 @@ const ProjectCard = ({ project }) => {
                     {projectName}
                 </Typography>
                 <Typography color="white" className="mb-6">
-                    {/* {truncatedDescription} */}
-                    {description}
+                    {truncatedDescription}
+                    {/* {description} */}
                 </Typography>
             </CardBody>
             <CardFooter className="mt-auto">
