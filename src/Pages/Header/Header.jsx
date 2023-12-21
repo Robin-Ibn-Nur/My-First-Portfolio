@@ -5,15 +5,13 @@ import {
     Navbar,
     Collapse,
     Typography,
-    Button,
     IconButton,
     Avatar,
 
 } from "@material-tailwind/react";
-
-import Logo from '../../Component/Logo/Logo';
 import r from '/R.png'
-import { animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+
+import NavMenu from './NavMenu';
 
 
 const Header = () => {
@@ -27,100 +25,23 @@ const Header = () => {
     }, []);
 
 
-    useEffect(() => {
-        scrollSpy.update();
-    }, []);
-
-    const scrollToSection = (sectionId) => {
-        scroller.scrollTo(sectionId, {
-            duration: 800,
-            delay: 0,
-            smooth: 'easeInOutQuart',
-        });
-    };
-
-    // menu Items
-    const navList = (
-        <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-normal cursor-pointer"
-            >
-                <a
-                    className="flex items-center font-bold transition-colors hover:text-blue-500 focus:text-blue-500 text-white"
-                    onClick={() => scrollToSection("home")}
-                >
-                    <Logo text="Home"></Logo>
-                </a>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-normal cursor-pointer"
-            >
-                <a className="flex items-center font-bold transition-colors hover:text-blue-500 focus:text-blue-500 text-white"
-                    onClick={() => scrollToSection("aboutMe")}
-                >
-                    <Logo text="About Me"></Logo>
-                </a>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-normal cursor-pointer"
-            >
-                <a className="flex items-center font-bold transition-colors hover:text-blue-500 focus:text-blue-500 text-white"
-                    onClick={() => scrollToSection("skills")}
-                >
-                    <Logo text="Skills"></Logo>
-                </a>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-normal cursor-pointer"
-            >
-                <a className="flex items-center font-bold transition-colors hover:text-blue-500 focus:text-blue-500 text-white"
-                    onClick={() => scrollToSection("myPortfolio")}
-                >
-                    <Logo text="My Portfolio"></Logo>
-                </a>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-normal cursor-pointer"
-            >
-                <a className="flex items-center font-bold transition-colors hover:text-blue-500 focus:text-blue-500 text-white"
-                    onClick={() => scrollToSection("contactMe")}
-                >
-                    <Logo text="Contact Me"></Logo>
-                </a>
-            </Typography>
-        </ul>
-    );
 
     return (
-        <div className="sticky top-0 z-10  flex justify-between ">
-            <Navbar className=" backdrop-blur-sm bg-white/10 border-none font-bold max-w-full rounded-none">
-                <div className="flex items-center justify-between">
+        <div className="container mx-auto lg:sticky top-3 my-5 lg:my-0  z-10 px-2 flex justify-center">
+            <Navbar className="lg:absolute nav_style border border-gray-900 lg:border-none font-bold ">
+                <div className="grid grid-flow-col justify-stretch">
 
                     <Typography
                         as="a"
                         href="#"
-                        className="mr-4 cursor-pointer font-bold text-xl text-white"
+                        className="mr-4 text-3xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 sm:text-4xl md:text-2xl"
+
                     >
-                        <Avatar src={r} alt="avatar" />
+                        RoBiN
                     </Typography>
 
                     <div className="flex items-center gap-4">
-                        <div className="mr-4 hidden lg:block">{navList}</div>
+                        <div className="mr-4 hidden lg:block"><NavMenu /></div>
 
                         <IconButton
                             variant="text"
@@ -162,7 +83,7 @@ const Header = () => {
                     </div>
                 </div>
                 <Collapse open={openNav}>
-                    {navList}
+                    <NavMenu />
                 </Collapse>
             </Navbar>
         </div>

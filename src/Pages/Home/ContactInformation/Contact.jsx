@@ -41,7 +41,7 @@ const Contact = () => {
         form.current.reset()
     };
     return (
-        <div id="contactMe" className="flex justify-center my-5 items-center container mx-auto w-full">
+        <div id="contactMe" className="flex justify-center p-10 items-center container mx-auto w-full">
 
             <div>
                 <Title text="contact with me"></Title>

@@ -18,7 +18,7 @@ const AboutMe = () => {
     });
 
     return (
-        <div id="aboutMe">
+        <div id="aboutMe" className="p-10">
             <animated.div className="about-me w-full text-center" style={fade}>
                 <animated.div className="about-me-content  container mx-auto" style={slide}>
                     <Title text="about me"></Title>

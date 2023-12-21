@@ -13,6 +13,7 @@
     "@emailjs/browser": "^3.11.0",
     "@material-tailwind/react": "^2.0.4",
     "@react-spring/web": "^9.7.3",
+    "aos": "^2.3.4",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
@@ -21,15 +22,13 @@
     "react-router-dom": "^6.14.0",
     "react-scroll": "^1.8.9",
     "sort-by": "^1.2.0",
-    "sweetalert2": "^11.7.12",
-    "swiper": "^10.0.2"
+    "sweetalert2": "^11.7.12"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.14",
-    "daisyui": "^3.1.7",
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
