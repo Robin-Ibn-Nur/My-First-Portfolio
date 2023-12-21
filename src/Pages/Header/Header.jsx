@@ -12,6 +12,7 @@ import {
 import r from '/R.png'
 
 import NavMenu from './NavMenu';
+import TimeCounter from '../Home/Time/TimeCounter';
 
 
 const Header = () => {
@@ -25,16 +26,20 @@ const Header = () => {
     }, []);
 
 
+    const gradient = {
+        background: 'rgb(51, 126, 34) radial-gradient(circle, rgba(51, 126, 34, 1) 32%, rgba(166, 37, 37, 1) 86%)',
+    };
+
 
     return (
-        <div className="container mx-auto lg:sticky top-3 my-5 lg:my-0  z-10 px-2 flex justify-center">
-            <Navbar className="lg:absolute nav_style border border-gray-900 lg:border-none font-bold ">
+        <div className="container mx-auto sticky top-3 z-10 px-2 flex justify-center">
+            <Navbar className="absolute nav_style border border-gray-900 border-none font-bold ">
                 <div className="grid grid-flow-col justify-stretch">
-
                     <Typography
                         as="a"
                         href="#"
-                        className="mr-4 text-3xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 sm:text-4xl md:text-2xl"
+                        className="mr-4 text-3xl font-bold tracking-tighter bg-clip-text text-transparent sm:text-4xl md:text-2xl bg-gradient-to-r from-red-500 via-green-500 to-red-500"
+
 
                     >
                         RoBiN
@@ -42,7 +47,7 @@ const Header = () => {
 
                     <div className="flex items-center gap-4">
                         <div className="mr-4 hidden lg:block"><NavMenu /></div>
-
+                        <TimeCounter />
                         <IconButton
                             variant="text"
                             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"

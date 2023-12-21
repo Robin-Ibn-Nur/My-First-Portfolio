@@ -7,23 +7,13 @@ import SkillSection from "../SkillSection/SkillSection";
 
 const Home = () => {
     return (
-        <div>
+        <>
             <Banner></Banner>
             <AboutMe></AboutMe>
             <SkillSection></SkillSection>
             <Projects></Projects>
             <Contact></Contact>
-        </div>
-
-        // for animation use only
-        // <div className='grid-bg ba-grid anim'>
-        //     <div className="inner"></div>
-        //     <Banner></Banner>
-        //     <AboutMe></AboutMe>
-        //     <SkillSection></SkillSection>
-        //     <Projects></Projects>
-        //     <Contact></Contact>
-        // </div>
+        </>
     );
 };
 

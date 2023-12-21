@@ -14,8 +14,8 @@ const TimeCounter = () => {
 
     const timeAnimation = useSpring({
         opacity: 1,
-        transform: 'translateY(0)',
-        from: { opacity: 0, transform: 'translateY(-20px)' },
+        transform: 'translatex(0)',
+        from: { opacity: 0, transform: 'translatex(50px)' },
     });
 
     const formatTime = (value) => {
@@ -27,7 +27,7 @@ const TimeCounter = () => {
     const seconds = formatTime(time.getSeconds());
     return (
         <div>
-            <animated.div className="text-2xl text-white flex flex-row-reverse font-bold" style={timeAnimation}>
+            <animated.div className="text-sm text-white flex flex-row-reverse font-bold" style={timeAnimation}>
                 {hours} : {minutes} : {seconds}
             </animated.div>
         </div>
