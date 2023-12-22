@@ -35,15 +35,12 @@
 }
 
 .reset {
-    width: max-content;
     margin-inline: auto;
     padding: 0.5em 1.25em;
     font-size: 1.5rem;
     border-radius: 1rem;
     border: 0;
     position: relative;
-    background-color: hsl(221, 100%, 62%);
-    color: #ffffff;
 }
 
 .reset::after,

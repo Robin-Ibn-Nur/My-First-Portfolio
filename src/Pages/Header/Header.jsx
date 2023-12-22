@@ -6,10 +6,8 @@ import {
     Collapse,
     Typography,
     IconButton,
-    Avatar,
 
 } from "@material-tailwind/react";
-import r from '/R.png'
 
 import NavMenu from './NavMenu';
 import TimeCounter from '../Home/Time/TimeCounter';
@@ -24,11 +22,6 @@ const Header = () => {
             () => window.innerWidth >= 960 && setOpenNav(false)
         );
     }, []);
-
-
-    const gradient = {
-        background: 'rgb(51, 126, 34) radial-gradient(circle, rgba(51, 126, 34, 1) 32%, rgba(166, 37, 37, 1) 86%)',
-    };
 
 
     return (

@@ -4,16 +4,16 @@ import 'aos/dist/aos.css';
 import { useEffect } from "react";
 
 
-const Animation = ({ children, type }) => {
+const Animation = ({ children }) => {
     useEffect(() => {
         AOS.init({
             offset: 200,
-            duration: 600,
-            delay: 100,
+            duration: 1000,
+            delay: 500,
         });
     }, [])
     return (
-        <div data-aos={type}>
+        <div data-aos="fade-down">
             {children}
         </div>
     );
