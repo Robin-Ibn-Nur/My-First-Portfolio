@@ -1,0 +1,73 @@
+.letter-loader {
+    background-color: black;
+    font-family: san serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    .letter {
+        text-align: center;
+        white-space: nowrap;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 64px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .clip {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        overflow: clip;
+        animation: letter-load 4s ease-in infinite;
+    }
+
+    .letter.fill {
+        position: relative;
+        color: red;
+        width: 100%;
+    }
+}
+
+@keyframes letter-load {
+    0% {
+        width: 0%;
+    }
+
+    25% {
+        width: 25%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes letter-load {
+    0% {
+        width: 0%;
+    }
+
+    25% {
+        width: 25%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

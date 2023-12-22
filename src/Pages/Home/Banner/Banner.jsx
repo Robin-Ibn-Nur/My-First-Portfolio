@@ -17,7 +17,7 @@ const Banner = () => {
 
 
     return (
-        <div id="home" className="name-banner relative h-96 md:h-[500px] lg:h-screen flex justify-center items-center">
+        <div id="home" className="name-banner relative h-96 md:h-[500px] lg:h-screen ">
             <div className="name">
                 <Animation>
                     <main className="text-container flex justify-center items-center">
