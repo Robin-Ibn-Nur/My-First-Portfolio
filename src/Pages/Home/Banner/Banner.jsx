@@ -17,12 +17,13 @@ const Banner = () => {
 
 
     return (
-        <div id="home" className="name-banner relative h-96 md:h-[500px] lg:h-screen ">
+        <div id="home" className="name-banner container mx-auto relative h-96 md:h-[500px] lg:h-screen ">
+            <div className="gradient"></div>
             <div className="name">
                 <Animation>
                     <main className="text-container flex justify-center items-center">
                         <svg className="text-stroke" viewBox="0 0 500 100" width="80%" height="100%">
-                            <text className="text uppercase" x="15" y="75">
+                            <text className="uppercase" x="15" y="75">
                                 md.robin
                             </text>
                         </svg>

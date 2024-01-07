@@ -11,10 +11,12 @@
 
 
 body {
-    --bg-width: 50px;
-    --bg-height: 50px;
+    background-color: #040a22;
     color: #ffffff;
+    /* --bg-width: 50px;
+    --bg-height: 50px;
     background: url("/darkness.webp") repeat 0 0;
     animation: bg-scrolling-reverse .92s infinite;
     animation-timing-function: linear;
+    */
 }
