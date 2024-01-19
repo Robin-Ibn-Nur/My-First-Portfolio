@@ -1,5 +1,5 @@
 import './Banner.css'
-import resume from '/Md_Robin.pdf'
+import resume from '/Robin_Resume_of_MERN_Stack_Developer.pdf'
 import { AiOutlineDownload } from "react-icons/ai";
 import Animation from "../../../Component/Animation/Animation";
 const Banner = () => {
