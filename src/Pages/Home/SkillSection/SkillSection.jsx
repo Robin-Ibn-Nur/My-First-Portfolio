@@ -1,32 +1,10 @@
-import { useSpring, animated } from '@react-spring/web'
+import Animation from '../../../Component/Animation/Animation';
 import SkillImage from '../../../Component/SkillImage/SkillImage';
 import Title from '../../../Component/Title/Title';
 
 
 const SkillSection = () => {
-    // Animation props for expertise section
-    const expertiseProps = useSpring({
-        opacity: 1,
-        transform: 'translateY(0)',
-        from: { opacity: 0, transform: 'translateY(100px)' },
-        config: { duration: 1000 },
-    });
 
-    // Animation props for comfortable section
-    const comfortableProps = useSpring({
-        opacity: 1,
-        transform: 'translateX(0)',
-        from: { opacity: 0, transform: 'translateX(-100px)' },
-        config: { duration: 1000 },
-    });
-
-    // Animation props for familiar section
-    const familiarProps = useSpring({
-        opacity: 1,
-        transform: 'translateX(0)',
-        from: { opacity: 0, transform: 'translateX(100px)' },
-        config: { duration: 1000 },
-    });
 
     // Data for expertZone
     const expertZone = [
@@ -117,12 +95,14 @@ const SkillSection = () => {
     ]
     return (
         <div id='skills' className="p-10">
-            <Title text="skills"></Title>
+            <Animation>
+                <Title text="skills" />
+            </Animation>
 
             <div className="grid justify-center container mx-auto gap-y-10 w-full">
-                <animated.div style={expertiseProps} className="">
+                <Animation>
                     <p className="text-2xl font-bold capitalize after:content-['_💪'] my-4">Expert</p>
-                    <animated.div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
+                    <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
                         {
                             expertZone.map((im, i) => <SkillImage
                                 image={im.image}
@@ -130,12 +110,12 @@ const SkillSection = () => {
                                 key={i}>
                             </SkillImage>)
                         }
-                    </animated.div>
-                </animated.div>
+                    </div>
+                </Animation>
 
-                <animated.div style={comfortableProps}>
+                <Animation>
                     <p className="text-2xl font-bold capitalize after:content-['_😃'] my-4">Comfortable</p>
-                    <animated.div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
+                    <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
                         {
                             comfortZone.map((im, i) => <SkillImage
                                 image={im.image}
@@ -143,12 +123,12 @@ const SkillSection = () => {
                                 key={i}>
                             </SkillImage>)
                         }
-                    </animated.div>
-                </animated.div>
+                    </div>
+                </Animation>
 
-                <animated.div style={familiarProps}>
+                <Animation>
                     <p className="text-2xl font-bold capitalize after:content-['_🧐'] my-4">Familiar</p>
-                    <animated.div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
+                    <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
                         {
                             familiarZone.map((im, i) => <SkillImage
                                 image={im.image}
@@ -156,8 +136,8 @@ const SkillSection = () => {
                                 key={i}>
                             </SkillImage>)
                         }
-                    </animated.div>
-                </animated.div>
+                    </div>
+                </Animation>
             </div>
         </div>
     );

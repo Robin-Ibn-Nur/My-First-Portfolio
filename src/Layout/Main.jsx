@@ -15,14 +15,19 @@ const Main = () => {
     }, [])
     return (
         <>
-            {
+            {/* {
                 loading ? <PreLoader /> :
                     <div className="min-h-screen font-serif">
                         <Header />
                         <Outlet />
                         <Footer />
                     </div>
-            }
+            } */}
+            <div className="min-h-screen font-serif">
+                <Header />
+                <Outlet />
+                <Footer />
+            </div>
         </>
 
     );

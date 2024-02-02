@@ -19,7 +19,16 @@ const AboutMe = () => {
     });
 
     return (
-        <div id="aboutMe" className="p-10">
+        <div id="aboutMe" className="p-10"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="2000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+        >
             <animated.div className="about-me w-full text-center" style={fade}>
                 <animated.div className="about-me-content  container mx-auto" style={slide}>
                     <Title text="about me"></Title>
