@@ -4,7 +4,6 @@ import { Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
 import PreLoader from "../Component/PreLoader/PreLoader";
 
-
 const Main = () => {
     const [loading, setLoading] = useState(true)
     useEffect(() => {
@@ -15,19 +14,14 @@ const Main = () => {
     }, [])
     return (
         <>
-            {/* {
+            {
                 loading ? <PreLoader /> :
                     <div className="min-h-screen font-serif">
                         <Header />
                         <Outlet />
                         <Footer />
                     </div>
-            } */}
-            <div className="min-h-screen font-serif">
-                <Header />
-                <Outlet />
-                <Footer />
-            </div>
+            }
         </>
 
     );

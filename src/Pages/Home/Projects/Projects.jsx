@@ -1,3 +1,4 @@
+import Animation from '../../../Component/Animation/Animation';
 import Title from '../../../Component/Title/Title';
 
 
@@ -8,12 +9,16 @@ const Projects = () => {
     return (
 
         <div id='myPortfolio' className="p-10">
-            <Title text="My Projects" />
-            <div className="container my-10 mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-                {projects.map((project, i) => (
-                    <ProjectCard project={project} key={i} />
-                ))}
-            </div>
+            <Animation>
+                <Title text="My Projects" />
+            </Animation>
+            <Animation>
+                <div className="container my-10 mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                    {projects.map((project, i) => (
+                        <ProjectCard project={project} key={i} />
+                    ))}
+                </div>
+            </Animation>
         </div>
 
     );
