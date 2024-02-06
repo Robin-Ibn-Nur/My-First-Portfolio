@@ -1,7 +1,5 @@
 import Animation from '../../../Component/Animation/Animation';
 import Title from '../../../Component/Title/Title';
-
-
 import projects from '../../../ProjectData/ProjectData';
 import ProjectCard from "./ProjectCard";
 

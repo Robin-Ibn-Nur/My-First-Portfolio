@@ -9,6 +9,7 @@ import {
 } from "@material-tailwind/react";
 import Title from "../../../Component/Title/Title";
 import Swal from "sweetalert2";
+import Animation from "../../../Component/Animation/Animation";
 
 const Contact = () => {
 
@@ -44,38 +45,32 @@ const Contact = () => {
         <div id="contactMe" className="flex justify-center p-10 items-center container mx-auto w-full">
 
             <div>
-                <Title text="contact with me"></Title>
+                <Animation>
+                    <Title text="contact with me"></Title>
+                </Animation>
                 <Card className="text-center" color="transparent" shadow={false}>
 
-                    <Typography color="white" className="mt-1 font-bold">
-                        Enter your details here.
-                    </Typography>
+                    <Animation>
+                        <Typography color="white" className="mt-1 font-bold">
+                            Enter your details here.
+                        </Typography>
+                    </Animation>
 
-                    <form ref={form} onSubmit={sendEmail} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 mx-auto">
-                        <div className="mb-4 flex flex-col gap-6">
-                            <Input className="" size="lg" name="user_name" label="Name" />
-                            <Input className="" size="lg" name="user_email" label="Email" />
-                            <Textarea className="" size="lg" name="message" label="Message" />
-                        </div>
-                        <Button type="submit" className="mt-6" fullWidth>
-                            Register
-                        </Button>
-                    </form>
+                    <Animation>
+                        <form ref={form} onSubmit={sendEmail} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 mx-auto">
+                            <div className="mb-4 flex flex-col gap-6">
+                                <Input className="" size="lg" name="user_name" label="Name" />
+                                <Input className="" size="lg" name="user_email" label="Email" />
+                                <Textarea className="" size="lg" name="message" label="Message" />
+                            </div>
+                            <Button type="submit" className="mt-6" fullWidth>
+                                Register
+                            </Button>
+                        </form>
+                    </Animation>
                 </Card>
             </div>
         </div>
-
-        // <div>
-        //     <form ref={form} onSubmit={sendEmail}>
-        //         <label>Name</label>
-        //         <input type="text" name="user_name" />
-        //         <label>Email</label>
-        //         <input type="email" name="user_email" />
-        //         <label>Message</label>
-        //         <textarea name="message" />
-        //         <input type="submit" value="Send" />
-        //     </form>
-        // </div>
     );
 };
 
