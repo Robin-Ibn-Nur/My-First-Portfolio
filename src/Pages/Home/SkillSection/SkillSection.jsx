@@ -1,6 +1,7 @@
 import Animation from '../../../Component/Animation/Animation';
 import SkillImage from '../../../Component/SkillImage/SkillImage';
 import Title from '../../../Component/Title/Title';
+import "./SkillSection.css"
 
 
 const SkillSection = () => {
@@ -94,52 +95,78 @@ const SkillSection = () => {
         },
     ]
     return (
-        <div id='skills' className="p-10">
-            <Animation>
-                <Title text="skills" />
-            </Animation>
+        // <div id='skills' className="p-10">
+        //     <Animation>
+        //         <Title text="skills" />
+        //     </Animation>
 
-            <div className="grid justify-center container mx-auto gap-y-10 w-full">
-                <Animation>
-                    <p className="text-2xl font-bold capitalize after:content-['_💪'] my-4">Expert</p>
-                    <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
-                        {
-                            expertZone.map((im, i) => <SkillImage
-                                image={im.image}
-                                text={im.name}
-                                key={i}>
-                            </SkillImage>)
-                        }
-                    </div>
-                </Animation>
+        //     <div className="grid justify-center container mx-auto gap-y-10 w-full">
+        //         <Animation>
+        //             <p className="text-2xl font-bold capitalize after:content-['_💪'] my-4">Expert</p>
+        //             <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
+        //                 {
+        //                     expertZone.map((im, i) => <SkillImage
+        //                         image={im.image}
+        //                         text={im.name}
+        //                         key={i}>
+        //                     </SkillImage>)
+        //                 }
+        //             </div>
+        //         </Animation>
 
-                <Animation>
-                    <p className="text-2xl font-bold capitalize after:content-['_😃'] my-4">Comfortable</p>
-                    <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
-                        {
-                            comfortZone.map((im, i) => <SkillImage
-                                image={im.image}
-                                text={im.name}
-                                key={i}>
-                            </SkillImage>)
-                        }
-                    </div>
-                </Animation>
+        //         <Animation>
+        //             <p className="text-2xl font-bold capitalize after:content-['_😃'] my-4">Comfortable</p>
+        //             <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
+        //                 {
+        //                     comfortZone.map((im, i) => <SkillImage
+        //                         image={im.image}
+        //                         text={im.name}
+        //                         key={i}>
+        //                     </SkillImage>)
+        //                 }
+        //             </div>
+        //         </Animation>
 
-                <Animation>
-                    <p className="text-2xl font-bold capitalize after:content-['_🧐'] my-4">Familiar</p>
-                    <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
-                        {
-                            familiarZone.map((im, i) => <SkillImage
-                                image={im.image}
-                                text={im.name}
-                                key={i}>
-                            </SkillImage>)
-                        }
+        //         <Animation>
+        //             <p className="text-2xl font-bold capitalize after:content-['_🧐'] my-4">Familiar</p>
+        //             <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
+        //                 {
+        //                     familiarZone.map((im, i) => <SkillImage
+        //                         image={im.image}
+        //                         text={im.name}
+        //                         key={i}>
+        //                     </SkillImage>)
+        //                 }
+        //             </div>
+        //         </Animation>
+        //     </div>
+
+        // </div>
+        <div className='main-container w-[100%] h-screen py-10'>
+            <div className="skills-circle-wrap ">
+                <div className="btn">hover me</div>
+                <div className="skills-circle">
+                    <div className="skill-orbit">
+                        <div className="skill-planet"><span>JS</span></div>
                     </div>
-                </Animation>
+                    <div className="skill-orbit">
+                        <div className="skill-planet"><span>CSS</span></div>
+                    </div>
+                    <div className="skill-orbit">
+                        <div className="skill-planet"><span>HTML</span></div>
+                    </div>
+                    <div className="skill-orbit">
+                        <div className="skill-planet"><span>TW</span></div>
+                    </div>
+                    <div className="skill-orbit">
+                        <div className="skill-planet"><span>BT</span></div>
+                    </div>
+                </div>
+                <div className="skills-top-circle panel"></div>
             </div>
         </div>
+
+
     );
 };
 
