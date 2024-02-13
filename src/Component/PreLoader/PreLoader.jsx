@@ -1,4 +1,3 @@
-// import preLoaderImg from "/PreLoader.svg"
 import './PreLoader.css';
 const PreLoader = () => {
     return (

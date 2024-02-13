@@ -23,7 +23,7 @@
 
 .letter.fill {
     position: relative;
-    color: red;
+    color: rgba(255, 192, 203, 1);
     width: 100%;
 }
 
