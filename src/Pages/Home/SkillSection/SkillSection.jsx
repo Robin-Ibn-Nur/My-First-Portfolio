@@ -1,7 +1,7 @@
 import Animation from '../../../Component/Animation/Animation';
 import SkillImage from '../../../Component/SkillImage/SkillImage';
 import Title from '../../../Component/Title/Title';
-// import "./SkillSection.css"
+
 
 
 const SkillSection = () => {
@@ -99,7 +99,6 @@ const SkillSection = () => {
             <Animation>
                 <Title text="skills" />
             </Animation>
-
             <div className="grid justify-center container mx-auto gap-y-10 w-full">
                 <Animation>
                     <p className="text-2xl font-bold capitalize after:content-['_💪'] my-4">Expert</p>
