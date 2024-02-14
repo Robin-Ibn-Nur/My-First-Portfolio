@@ -1,16 +1,10 @@
-/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+:root {
+    --hue: 210;
 
-
-
-@keyframes bg-scrolling-reverse {
-    100% {
-        background-position: var(--bg-width) var(--bg-height);
-    }
 }
 
-
-
 body {
-    background-color: #040a22;
+    /* background-color: #040a22; */
+    background: hsl(var(--hue) 50% 8%);
     color: #ffffff;
 }

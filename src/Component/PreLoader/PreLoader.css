@@ -1,4 +1,4 @@
-.letter-loader {
+/* .letter-loader {
     background-color: black;
     font-family: san serif;
     margin: 0;
@@ -71,4 +71,20 @@
     100% {
         width: 100%;
     }
+} */
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader {
+
+    border-top-color: #3498db;
+    animation: spin 1s infinite linear;
 }
