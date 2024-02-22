@@ -3,21 +3,18 @@ import Title from '../../../Component/Title/Title';
 import { Badge } from "@material-tailwind/react";
 import './index.css'
 
+// Data for expertZone
+const expertZone = ["HTML", "CSS", "JavaScript", "React.JS", "Tailwind CSS", "Bootstrap", "daisyUI", "NextUI", "Material UI", "Material Tailwind"
+]
+// Data for comfortZone
+const comfortZone = ["Express.JS", "Firebase", "AXIOS", "MongoDB", "JWT Token", "Netlify", "React Router", "Tanstack Query", "React Native",
+]
+// Data for familiarZone
+const familiarZone = ["Node.js",
+    "Nodemailer", "Stripe", "Vercel", "Typescript"
+]
 const SkillSection = () => {
 
-
-    // Data for expertZone
-    const expertZone = ["HTML", "CSS", "JavaScript", "React.JS", "Tailwind CSS", "Bootstrap", "daisyUI", "NextUI", "Material UI", "Material Tailwind"
-    ]
-
-    // Data for comfortZone
-    const comfortZone = ["Express.JS", "Firebase", "AXIOS", "MongoDB", "JWT Token", "Netlify", "React Router", "Tanstack Query", "React Native",
-    ]
-
-    // Data for familiarZone
-    const familiarZone = ["Node.js",
-        "Nodemailer", "Stripe", "Vercel", "Typescript"
-    ]
     return (
         <div id='skills' className="p-10">
             <Animation>
