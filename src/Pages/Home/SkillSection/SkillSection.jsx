@@ -1,5 +1,4 @@
 import Animation from '../../../Component/Animation/Animation';
-// import SkillImage from '../../../Component/SkillImage/SkillImage';
 import Title from '../../../Component/Title/Title';
 import { Badge } from "@material-tailwind/react";
 import './index.css'
@@ -24,8 +23,8 @@ const SkillSection = () => {
             <Animation>
                 <Title text="skills" />
             </Animation>
-            <div className="grid justify-center container mx-auto gap-y-10 w-full">
-                <Animation>
+            <Animation>
+                <div className="grid justify-center container mx-auto gap-y-10 w-full">
                     <p className="text-2xl font-bold capitalize after:content-['_💪'] my-4">Expert</p>
                     <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-5">
                         {
@@ -34,9 +33,6 @@ const SkillSection = () => {
                             </Badge>))
                         }
                     </div>
-                </Animation>
-
-                <Animation>
                     <p className="text-2xl font-bold capitalize after:content-['_😃'] my-4">Comfortable</p>
                     <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
                         {
@@ -45,9 +41,6 @@ const SkillSection = () => {
                             </Badge>))
                         }
                     </div>
-                </Animation>
-
-                <Animation>
                     <p className="text-2xl font-bold capitalize after:content-['_🧐'] my-4">Familiar</p>
                     <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
                         {
@@ -56,8 +49,9 @@ const SkillSection = () => {
                             </Badge>))
                         }
                     </div>
-                </Animation>
-            </div>
+
+                </div>
+            </Animation>
 
         </div>
 
