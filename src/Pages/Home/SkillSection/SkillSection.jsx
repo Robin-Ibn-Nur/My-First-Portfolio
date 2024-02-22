@@ -11,7 +11,7 @@ const comfortZone = ["Express.JS", "Firebase", "AXIOS", "MongoDB", "JWT Token", 
 ]
 // Data for familiarZone
 const familiarZone = ["Node.js",
-    "Nodemailer", "Stripe", "Vercel", "Typescript"
+    "Next.js", "Stripe", "Vercel", "Typescript"
 ]
 const SkillSection = () => {
 
