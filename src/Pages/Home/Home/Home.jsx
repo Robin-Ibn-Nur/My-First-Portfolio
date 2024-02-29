@@ -10,11 +10,11 @@ const Home = () => {
 
     return (
         <>
-            <Banner></Banner>
-            <AboutMe></AboutMe>
-            <SkillSection></SkillSection>
-            <Projects></Projects>
-            <Contact></Contact>
+            <Banner />
+            <AboutMe />
+            <SkillSection />
+            <Projects />
+            <Contact />
         </>
     );
 };
