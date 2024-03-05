@@ -1,54 +1,43 @@
 import Animation from '../../../Component/Animation/Animation';
 import Title from '../../../Component/Title/Title';
-import { Badge } from "@material-tailwind/react";
 import './index.css'
+import { comfortZone, expertZone, familiarZone } from './data';
 
-// Data for expertZone
-const expertZone = ["HTML", "CSS", "JavaScript", "React.JS", "Tailwind CSS", "Bootstrap", "daisyUI", "NextUI", "Material UI", "Material Tailwind"
-]
-// Data for comfortZone
-const comfortZone = ["Express.JS", "Firebase", "AXIOS", "MongoDB", "JWT Token", "Netlify", "React Router", "Tanstack Query", "React Native",
-]
-// Data for familiarZone
-const familiarZone = ["Node.js",
-    "Next.js", "Stripe", "Vercel", "Typescript"
-]
+
 const SkillSection = () => {
 
     return (
         <div id='skills' className="p-10">
-            <Animation>
-                <Title text="skills" />
-            </Animation>
-            <Animation>
-                <div className="grid justify-center container mx-auto gap-y-10 w-full">
-                    <p className="text-2xl font-bold capitalize after:content-['_💪'] my-4">Expert</p>
-                    <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-5">
-                        {
-                            expertZone.map((im, i) => (<Badge content={i + 1} withBorder key={i}>
-                                <button className='skill-btn'>{im}</button>
-                            </Badge>))
-                        }
+            <div className="container-fluid mt-5">
+                <Animation>
+                    <Title text="skills" />
+                    <div className="flex flex-wrap items-center justify-center gap-14">
+                        {expertZone.map((expert, index) => (
+                            <div key={index} className="h-52 w-52 flex flex-col items-center justify-center">
+                                <img className='h-44 w-48 rounded-r-full bg-white' src={expert?.image} alt={expert?.labal} />
+                                <h3 className='text-center font-bold mx-auto mt-5'>{expert?.labal}</h3>
+                            </div>
+                        ))}
                     </div>
-                    <p className="text-2xl font-bold capitalize after:content-['_😃'] my-4">Comfortable</p>
-                    <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
-                        {
-                            comfortZone.map((im, i) => (<Badge content={i + 1} withBorder key={i}>
-                                <button className='skill-btn'>{im}</button>
-                            </Badge>))
-                        }
+                    <div className="flex flex-wrap items-center justify-center gap-14 mt-20">
+                        {comfortZone.map((expert, index) => (
+                            <div key={index} className="h-52 w-52 flex flex-col items-center justify-center">
+                                <img className='h-44 w-48 rounded-r-full bg-white' src={expert?.image} alt={expert?.labal} />
+                                <h3 className='text-center font-bold mx-auto mt-5'>{expert?.labal}</h3>
+                            </div>
+                        ))}
                     </div>
-                    <p className="text-2xl font-bold capitalize after:content-['_🧐'] my-4">Familiar</p>
-                    <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
-                        {
-                            familiarZone.map((im, i) => (<Badge content={i + 1} withBorder key={i}>
-                                <button className='skill-btn'>{im}</button>
-                            </Badge>))
-                        }
+                    <div className="flex flex-wrap items-center justify-center gap-14 mt-20">
+                        {familiarZone.map((expert, index) => (
+                            <div key={index} className="h-52 w-52 flex flex-col items-center justify-center">
+                                <img className='h-44 w-48 rounded-r-full bg-white' src={expert?.image} alt={expert?.labal} />
+                                <h3 className='text-center font-bold mx-auto mt-5'>{expert?.labal}</h3>
+                            </div>
+                        ))}
                     </div>
+                </Animation>
 
-                </div>
-            </Animation>
+            </div>
 
         </div>
 

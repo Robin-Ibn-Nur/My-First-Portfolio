@@ -5,7 +5,6 @@ import Contact from "../ContactInformation/Contact";
 import Projects from "../Projects/Projects";
 import SkillSection from "../SkillSection/SkillSection";
 
-
 const Home = () => {
 
     return (

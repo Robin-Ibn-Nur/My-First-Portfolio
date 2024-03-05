@@ -1,4 +1,4 @@
-.skill-btn {
+/* .skill-btn {
     width: 150px;
     padding: 5px;
     border: none;
@@ -27,4 +27,31 @@
     transform: translateY(5px);
     padding-bottom: 0px;
     outline: 0;
+} */
+
+
+.amg-skills {
+    max-width: 960px;
+}
+
+.amg-badge-collection {
+    background: #151515;
+}
+
+.amg-badge {
+    padding: 20px 5%;
+}
+
+.amg-badge h3 {
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width : 639px) {
+    .amg-badge {
+        width: 50%;
+        padding: 20px 10%;
+    }
 }
